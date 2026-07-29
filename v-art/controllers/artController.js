@@ -1,5 +1,4 @@
 import Art from '../schema/artSchema.js'
-import mongoose from 'mongoose'
 
 // * Index - list all artwork
 // Method: GET

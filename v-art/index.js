@@ -1,6 +1,6 @@
 import express from 'express'
-import { v4 as uuid } from 'uuid'
-import mongoose, { mongo } from 'mongoose'
+// import { v4 as uuid } from 'uuid'
+import mongoose from 'mongoose'
 import 'dotenv/config'
 import router from './config/routes.js'
 
@@ -13,10 +13,7 @@ app.use(express.json())
 
 async function connectToDatabase() {
   try {
-    await mongoose.connect(connectionString, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    })
+    await mongoose.connect(connectionString)
     app.listen(port, () => {
       console.log(`🎨 - Server listening on port ${port}`)
     })
