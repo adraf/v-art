@@ -1,4 +1,8 @@
 import Art from '../schema/artSchema.js'
+import dayjs from 'dayjs'
+
+const date = dayjs()
+// TODO: Add in dayjs to updated to updatedBy - created At already exists. 
 
 // * Index - list all artwork
 // Method: GET
@@ -50,6 +54,7 @@ export const createArtwork = async (req, res) => {
       year: req.body.year,
       price: req.body.price,
       status: req.body.status,
+      createdAt: date,
     })
     const savedArtwork = await newArtwork.save()
     return res.status(201).json({ ...savedArtwork.toObject(), message: 'Artwork created successfully' })

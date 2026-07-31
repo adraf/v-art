@@ -13,12 +13,13 @@
   "type": "module",
   "dependencies": {
     "bcrypt": "^6.0.0",
+    "dayjs": "^1.11.21",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
     "jsonwebtoken": "^9.0.3",
     "mongodb": "^7.5.0",
     "mongoose": "^9.8.1",
-    "node": "^26.5.0",
+    "node": "^26.5.1",
     "nodemon": "^3.1.14",
     "npm": "^12.0.1",
     "primeflex": "^4.0.0",
@@ -29,5 +30,8 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "^6.0.7",
     "vite": "^8.1.1"
+  },
+  "allowScripts": {
+    "node@26.5.1": true
   }
 }

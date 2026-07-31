@@ -43,6 +43,13 @@ const artSchema = new mongoose.Schema({
     default: 'available',
     required: true,
   },
+  createdAt: {
+    type: Date,
+    required: true,
+  },
+  updatedAt: {
+    type: Date,
+  },
 })
 
 export default mongoose.model('Art', artSchema)
